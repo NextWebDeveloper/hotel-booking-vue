@@ -294,8 +294,8 @@ export default {
               const dayCost =
                 this.adults * cost +
                 this.childs512 *
-                  cost *
-                  (this.serverData[i].child_discount_perc / 100);
+                  (cost - cost *
+                  (this.serverData[i].child_discount_perc / 100));
               this.totalSum += dayCost;
             }
           }
